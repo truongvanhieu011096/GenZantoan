@@ -1,0 +1,40 @@
+const SUPPORT_PHONE = "0336175393";
+const SUPPORT_FORM  = "https://forms.gle/P3fW4y8oubNKEV638";
+
+const TOPICS = {
+  ap_luc: {
+    keywords: ["ap luc","stress","hoc nhieu","qua tai","lo diem","thi cu","met moi","lo lang"],
+    empathy: ["Mình cảm nhận được áp lực mà bạn đang chịu.","Cảm giác căng thẳng khi học tập là bình thường.","Bạn không đơn độc khi gặp áp lực học tập."],
+    explain: ["Áp lực kéo dài ảnh hưởng tới sức khỏe tinh thần và thể chất.","Điểm số không phản ánh tất cả khả năng của bạn."],
+    action: ["Chia nhỏ việc học, nghỉ giữa giờ, và viết nhật ký cảm xúc.","Trò chuyện với thầy cô hoặc bạn bè đáng tin cậy.","Thực hành hít thở sâu, thể dục nhẹ nhàng để giải tỏa stress."]
+  },
+  bao_luc: {
+    keywords: ["bao luc","bi danh","bat nat","co lap","de doa","coi thuong"],
+    empathy: ["Không ai xứng đáng bị tổn thương.","Mình hiểu bạn đang cảm thấy sợ hãi và buồn."],
+    explain: ["Bạo lực học đường để lại ảnh hưởng tâm lý lâu dài nếu không xử lý.","Im lặng không giúp vấn đề tự biến mất."],
+    action: ["Điều quan trọng nhất lúc này là đảm bảo an toàn cho bạn.","Nói ngay với thầy cô, gia đình hoặc người lớn đáng tin.","Ghi lại bằng chứng nếu có thể."]
+  },
+  sinh_san: {
+    keywords: ["gioi tinh","day thi","quan he","co the","sinh san","bao ve","tinh duc"],
+    empathy: ["Tìm hiểu về cơ thể là hoàn toàn bình thường.","Bạn không cần xấu hổ khi đặt câu hỏi."],
+    explain: ["Hiểu đúng về sức khỏe sinh sản giúp tự bảo vệ bản thân.","Sử dụng thông tin sai có thể gây hại lâu dài."],
+    action: ["Tra cứu thông tin từ nguồn chính thống.","Trao đổi với người lớn đáng tin cậy.","Luôn đặt sự an toàn và tôn trọng bản thân lên hàng đầu."]
+  },
+  giao_thong: {
+    keywords: ["tai nan","xe may","khong doi mu","vuot den do","giao thong","an toan"],
+    empathy: ["Tai nạn có thể xảy ra bất ngờ, việc lo lắng là đúng.","Bạn đang quan tâm đến an toàn bản thân."],
+    explain: ["Hầu hết tai nạn do vi phạm luật và chủ quan.","Đội mũ bảo hiểm giảm nguy cơ chấn thương nặng."],
+    action: ["Luôn đội mũ bảo hiểm, tuân thủ luật giao thông.","Không dùng điện thoại khi đi xe.","Đi đúng phần đường, băng qua đường đúng vạch."]
+  },
+  ky_nang_song: {
+    keywords: ["ky nang song","giai quyet van de","quan ly cam xuc","tu quan ly","ky nang"],
+    empathy: ["Mình hiểu bạn muốn cải thiện kỹ năng sống.","Học cách xử lý tình huống sẽ giúp bạn tự tin hơn."],
+    explain: ["Kỹ năng sống giúp tự lập và giải quyết vấn đề hiệu quả.","Quản lý cảm xúc giúp giảm căng thẳng và mâu thuẫn."],
+    action: ["Lập kế hoạch từng bước, đặt mục tiêu nhỏ.","Quản lý cảm xúc bằng nhật ký, thiền, hoặc trò chuyện.","Học hỏi từ sai lầm và tự rút kinh nghiệm."]
+  },
+  fallback: {
+    empathy: ["Mình chưa hiểu rõ câu hỏi.","Cảm ơn bạn đã chia sẻ."],
+    explain: ["Có thể mình cần bạn mô tả chi tiết hơn."],
+    action: ["Bạn có thể thử diễn đạt lại.","Nhấn nút trợ giúp ẩn danh để được thầy cô hỗ trợ."]
+  }
+};
