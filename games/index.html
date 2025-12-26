@@ -2,57 +2,210 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <title>Trò chơi | Gen Z An Toàn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trò chơi tương tác - Gen Z An Toàn</title>
+
+    <!-- CSS chung của root -->
     <link rel="stylesheet" href="../style.css">
+
     <style>
-        /* Thông báo trung tâm */
-        .placeholder-game {
+        main {
+            min-height: calc(100vh - 160px);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 400px;
-            background: rgba(255,255,255,0.75);
+        }
+
+        .game-container {
+            max-width: 700px;
+            width: 100%;
+            background: #ffffff;
             border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(108,99,255,0.15);
-            font-size: 1.5rem;
-            color: #6C63FF;
+            box-shadow: 0 10px 30px rgba(37,99,235,0.15);
+            padding: 40px 30px;
             text-align: center;
-            padding: 20px;
+        }
+
+        .game-container h2 {
+            font-size: 1.6rem;
+            color: #1e3a8a;
+            margin-bottom: 12px;
+        }
+
+        .game-container p {
+            font-size: 1rem;
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .game-list {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .game-card {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-bottom: 16px;
+            border-left: 6px solid #2563eb;
+        }
+
+        .game-card h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+            color: #1f2937;
+        }
+
+        .game-card p {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .game-card a {
+            display: inline-block;
+            padding: 8px 14px;
+            background: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .game-card a:hover {
+            background: #1e40af;
+        }
+
+        .coming-soon {
+            margin-top: 10px;
+            font-style: italic;
+            color: #6b7280;
+            text-align: center;
         }
     </style>
+<style>
+/* ===== MỖI GAME CARD MỘT MÀU ===== */
+
+.game-card {
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* Các màu luân phiên */
+.game-card:nth-child(6n+1) {
+    background: #e0f2fe; /* xanh dương nhạt */
+}
+
+.game-card:nth-child(6n+2) {
+    background: #fce7f3; /* hồng nhạt */
+}
+
+.game-card:nth-child(6n+3) {
+    background: #ede9fe; /* tím nhạt */
+}
+
+.game-card:nth-child(6n+4) {
+    background: #fef9c3; /* vàng nhạt */
+}
+
+.game-card:nth-child(6n+5) {
+    background: #ecfeff; /* xanh mint */
+}
+
+.game-card:nth-child(6n+6) {
+    background: #dcfce7; /* xanh lá nhạt */
+}
+
+/* Hover cho đẹp */
+.game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+}
+</style>
+
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Gen Z An Toàn</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Trang chủ</a></li>
-                    <li><a href="../sotay/index.html">Sổ tay điện tử</a></li>
-                    <li><a href="../podcast/index.html">Podcast yêu thương</a></li>
-                    <li><a href="index.html">Trò chơi tương tác</a></li>
-                    <li><a href="../chatbot/index.html">Chatbot Tâm lý</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h2>Trò chơi tương tác</h2>
-            <p>Trang này sẽ hiển thị các trò chơi định hướng cho học sinh.</p>
-        </section>
+<!-- ===== HEADER (GIỮ NGUYÊN ROOT) ===== -->
+<header>
+    <div class="container">
+        <h1 class="logo">Gen Z An Toàn</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="../sotay/index.html">Sổ tay điện tử</a></li>
+                <li><a href="../podcast/index.html">Podcast yêu thương</a></li>
+                <li><a href="index.html" class="active">Trò chơi tương tác</a></li>
+                <li><a href="../chatbot/index.html">Chatbot Tâm lý</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <section class="features" style="margin-bottom:50px;">
-            <div class="placeholder-game">
-                Chờ thầy Hiếu chuẩn bị xong trò chơi rồi đưa vào nhé! Hẹn gặp lại!
+<!-- ===== MAIN ===== -->
+<main>
+    <section class="game-container">
+
+        <h2>🎮 Khu vực Trò chơi dành cho học sinh</h2>
+
+        <p>
+            Đây là không gian trò chơi giáo dục giúp học sinh rèn luyện  
+            <strong>kỹ năng an toàn – tâm lý – ứng xử – tự bảo vệ bản thân</strong>.
+            
+        </p>
+
+     
+        <!-- DANH SÁCH GAME -->
+        <div class="game-list">
+
+            <!-- GAME SCRATCH -->
+            <div class="game-card">
+                <h3>🎯 Trò chơi Xử lý tình huống bạo lực học đường</h3>
+                <p>
+                    Chào mừng bạn đến với thử thách 'Hiệp sĩ học đường'! 🛡️ Trong ngôi trường này, không phải lúc nào mọi chuyện cũng êm đềm. Bạn sẽ hóa thân thành một học sinh thông thái, đối mặt với những tình huống bạo lực học đường thực tế. Mỗi lựa chọn của bạn sẽ quyết định sự an toàn của bản thân và bạn bè. Hãy suy nghĩ thật kỹ: Bạn sẽ im lặng, dùng nắm đấm, hay lên tiếng đúng cách? Bấm vào nhân vật để bắt đầu hành trình ngay bây giờ!
+                </p>
+                <a href="scratch1.html">Vào trò chơi</a>
             </div>
-        </section>
-    </main>
+			    <!-- GAME FLIPPITY -->
+    <div class="game-card">
+        <h3>🧠 Trò chơi Bingo kỹ năng sống</h3>
+        <p>
+            Biến những bài học khô khan thành cuộc đua đầy kịch tính! Thu thập các mảnh ghép kỹ năng, xử lý tình huống thực tế và trở thành người đầu tiên hô vang "BINGO". Bạn đã sẵn sàng làm chủ mọi tình huống chưa?
+        </p>
+        <a href="flippity.html">Vào trò chơi</a>
+    </div>
+	<!-- GAME GENIALLY -->
+<div class="game-card">
+    <h3>🧠 Trò chơi Nhiệm vụ sức khỏe học đường</h3>
+    <p>
+       Bạn đã sẵn sàng trở thành 'Chuyên gia sức khỏe' của lớp mình chưa? 🩺 Một hành trình khám phá đầy bí ẩn đang chờ đợi phía trước. Bạn sẽ phải vượt qua các trạm thử thách về dinh dưỡng, tâm lý và sức khỏe sinh sản để thu thập đủ bộ 'bí kíp' bảo vệ bản thân.
+    </p>
+    <a href="genially.html">Vào trò chơi</a>
+</div>
+            <!-- GAME TƯƠNG LAI -->
+            <div class="game-card">
+                <h3>🧠 Trò chơi tình huống tâm lý</h3>
+                <p>
+                    Dành cho học sinh đang lo lắng, sợ hãi, căng thẳng hoặc gặp khó khăn
+                    trong học tập – bạn bè – gia đình.
+                </p>
+                <span class="coming-soon">Đang chuẩn bị</span>
+            </div>
 
-    <footer>
-        <p>&copy; 2025 Gen Z An Toàn | Sản phẩm dự thi Nghiên cứu Khoa học kỹ thuật trường THCS Tố Hữu ❤️</p>
-    </footer>
+        </div>
+
+    </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>&copy; 2025 Gen Z An Toàn | Sản phẩm dự thi Nghiên cứu Khoa học kỹ thuật trường THCS Tố Hữu ❤️</p>
+</footer>
+
 </body>
 </html>
