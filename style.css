@@ -183,3 +183,20 @@ button {
         align-items: center;
     }
 }
+/* ====== EBOOK - SỔ TAY ĐIỆN TỬ ====== */
+.feature-card img {
+    width: 100%;
+    max-width: 160px;   /* ảnh nhỏ gọn */
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 6px;
+    text-align: center;
+}
