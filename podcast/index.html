@@ -7,74 +7,130 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Gen Z An Toàn</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Trang chủ</a></li>
-                    <li><a href="index.html">Podcast yêu thương</a></li>
-                    <li><a href="../sotay/index.html">Sổ tay điện tử</a></li>
-                    <li><a href="../games/index.html">Trò chơi tương tác</a></li>
-                    <li><a href="../chatbot/index.html">Chatbot Tâm lý</a></li>
-                </ul>
-            </nav>
+
+<header>
+    <div class="container">
+        <h1 class="logo">Gen Z An Toàn</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="index.html">Podcast yêu thương</a></li>
+                <li><a href="../sotay/index.html">Sổ tay điện tử</a></li>
+                <li><a href="../games/index.html">Trò chơi tương tác</a></li>
+                <li><a href="../chatbot/index.html">Chatbot Tâm lý</a></li>
+            </ul>
+        </nav>
+    </div>
+	<style>
+/* --- Bố cục riêng cho Podcast --- */
+
+/* Ép mỗi card chiếm 1 hàng */
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Card video */
+.game-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Video responsive – không chồng */
+.game-card video {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Mobile tối ưu */
+@media (max-width: 768px) {
+    .game-card video {
+        max-height: 260px;
+    }
+}
+</style>
+
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Podcast Yêu Thương</h2>
+        <p>
+            Không gian lắng nghe nhẹ nhàng, giúp các bạn học sinh thư giãn tinh thần, 
+            học cách yêu thương bản thân và vượt qua những áp lực tuổi học trò.
+        </p>
+    </section>
+
+    <!-- PODCAST LIST -->
+    <section class="features">
+
+        <div class="game-card">
+            <h3>🎧 Podcast 1 – Chiếc mũ bảo hiểm và lời hứa với chính mình</h3>
+            <video controls preload="metadata">
+                <source src="video/tap1.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
         </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h2>Podcast Yêu Thương</h2>
-            <p>Nghe các tập podcast giúp tinh thần thoải mái, chia sẻ câu chuyện tích cực và học cách vượt qua áp lực.</p>
-        </section>
+        <div class="game-card">
+            <h3>🎧 Podcast 2 – Chiếc mũ bảo hiểm và lời hứa với chính mình</h3>
+            <video controls preload="metadata">
+                <source src="video/tap1.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <section class="features" style="margin-bottom:50px;">
-            <!-- Podcast Episode 1 -->
-            <div class="feature-card">
-                <h3>Bài hát: Tình yêu giữa mùa đông</h3>
-                <audio controls>
-                    <source src="podcast1.mp3" type="audio/mpeg">
-                    Trình duyệt của bạn không hỗ trợ thẻ audio.
-                </audio>
-            </div>
+        <div class="game-card">
+            <h3>🎧 Podcast 3 –Chiếc mũ bảo hiểm và lời hứa với chính mình</h3>
+            <video controls preload="metadata">
+                <source src="video/tap1.mp4" type="video/mp4">
+            </video>
+        </div>
 
-            <!-- Podcast Episode 2 -->
-            <div class="feature-card">
-                <h3>Bài hát: Thiệp hồng sai tên</h3>
-                <audio controls>
-                    <source src="thiephongsaiten.mp3" type="audio/mpeg">
-                    Trình duyệt của bạn không hỗ trợ thẻ audio.
-                </audio>
-            </div>
+        <div class="game-card">
+            <h3>🎧 Podcast 4 –Chiếc mũ bảo hiểm và lời hứa với chính mình</h3>
+            <video controls preload="metadata">
+                <source src="video/tap1.mp4" type="video/mp4">
+            </video>
+        </div>
 
-            <!-- Podcast Episode 3 -->
-            <div class="feature-card">
-                <h3>Bài hát: Anh thua anh ta</h3>
-                <audio controls>
-                    <source src="anhthuaanhta.mp3" type="audio/mpeg">
-                    Trình duyệt của bạn không hỗ trợ thẻ audio.
-                </audio>
-            </div>
-        </section>
+        <div class="game-card">
+            <h3>🎧 Podcast 5 – Chiếc mũ bảo hiểm và lời hứa với chính mình</h3>
+            <video controls preload="metadata">
+                <source src="video/tap1.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <!-- Section Text đi kèm -->
-        <section class="text-content" style="max-width:900px; margin:50px auto; padding:0 20px;">
-            <h2>Nội dung đọc kèm</h2>
-            <p>
-               Vì chưa có Podcast nên thầy Hiếu để tạm mấy bài hát!
-            </p>
-            <p>
-                Mọi người cứ nghe tạm rồi sau này thầy Hiếu update sau nhé.
-            </p>
-            <p>
-                Hy vọng mọi người sẽ thích nè.
-            </p>
-        </section>
+    </section>
 
-    </main>
+    <!-- TEXT CONTENT -->
+    <section class="text-content" style="max-width:900px; margin:50px auto; padding:0 20px;">
+        <h2>Nội dung chia sẻ</h2>
+        <p>
+            Mỗi Podcast là một câu chuyện được chúng mình ghi lại.
+        </p>
+        <p>
+            Hãy thả lỏng lòng mình, nhắm mắt lại để nghe và cảm nhận!
+        </p>
+        <p>
+            Thật tuyệt khi chúng mình sẽ có những phút giây được thư giãn và cùng nhau vượt qua những áp lực trong cuộc sống.
+        </p>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Gen Z An Toàn | Sản phẩm dự thi Nghiên cứu Khoa học kỹ thuật trường THCS Tố Hữu ❤️</p>
-    </footer>
+</main>
+
+<footer>
+    <p>&copy; 2025 Gen Z An Toàn | Sản phẩm dự thi Nghiên cứu Khoa học kỹ thuật trường THCS Tố Hữu ❤️</p>
+</footer>
+
 </body>
 </html>
