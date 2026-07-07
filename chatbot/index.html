@@ -145,9 +145,42 @@
     <h2>Chatbot Tâm lý</h2>
     <p>Nhắn tin tâm sự và nhận chia sẻ tự động từ thầy cô.</p>
 </section>
+<style>
+.call-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #ef4444;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1000;
+}
 
+/* Nút Zalo */
+.zalo-btn {
+    position: fixed;
+    top: 65px; /* nằm dưới nút gọi */
+    right: 15px;
+    background: #0068ff;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 6px 16px rgba(0,104,255,0.25);
+    transition: 0.25s ease;
+}
+
+.zalo-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+</style>
 <a class="call-btn" href="tel:0336175393">📞 Gọi</a>
-
+<a class="zalo-btn" href="https://zalo.me/0336175393" target="_blank">💬 Zalo</a>
 <div class="chat-container">
     <div class="chat-header">
         Chatbot Tâm lý
