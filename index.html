@@ -1,61 +1,213 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gen Z An Toàn</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot Tâm lý - Gen Z An Toàn</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+/* ---------------- Chatbox kiểu app nhắn tin ---------------- */
+.chat-container {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(108,99,255,0.15);
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 50px;
+    height: 70vh;
+}
+
+.chat-header {
+    background: #6C63FF;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.chat-header small {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 4px;
+    color: #f0ebff;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f7f5ff;
+}
+
+.bot, .user {
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bot { 
+    background: #e8f3ff;
+    color: #333;
+    margin-right: auto;
+}
+
+.user {
+    background: #d9b3ff;
+    color: #fff;
+    margin-left: auto;
+    text-align: right;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    font-size: 14px;
+    border-bottom-left-radius: 20px;
+}
+
+.chat-input button {
+    background: #6C63FF;
+    color: white;
+    border: none;
+    padding: 0 18px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+}
+
+.chat-input button:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px;
+}
+
+.quick-actions button {
+    flex: 1 1 48%;
+    font-size: 13px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background: #d9b3ff;
+    color: #fff;
+}
+.call-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #ef4444;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1000;
+}
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Gen Z An Toàn</h1>
-            <nav>
-                <ul>
-                    <li><a href="sotay/index.html">Sổ tay điện tử</a></li>
-                    <li><a href="podcast/index.html">Podcast yêu thương</a></li>
-                    <li><a href="games/index.html">Trò chơi tương tác</a></li>
-                    <li><a href="chatbot/index.html">Chatbot Tâm lý</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="container">
+        <h1 class="logo">Gen Z An Toàn</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Trang chủ</a></li>
+                <li><a href="../sotay/index.html">Sổ tay điện tử</a></li>
+                <li><a href="../podcast/index.html">Podcast yêu thương</a></li>
+                <li><a href="../games/index.html">Trò chơi tương tác</a></li>
+                <li><a href="index.html">Chatbot Tâm lý</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main>
-        <section class="hero">
-            <h2>Chào mừng đến với Gen Z An Toàn</h2>
-            <p>Khám phá Sổ tay điện tử, nghe Podcast yêu thương, chơi Trò chơi tương tác và trò chuyện với Chatbot Tâm lý để nhận chia sẻ hữu ích.</p>
-            <a href="sotay/index.html" class="btn">Bắt đầu khám phá</a>
-        </section>
-
-        <section class="features">
-    <a href="sotay/index.html" class="feature-card">
-        <h3>Sổ tay điện tử</h3>
-        <p>Truy cập sổ tay, ebook và ghi chú điện tử.</p>
-    </a>
-
-    <a href="podcast/index.html" class="feature-card">
-        <h3>Podcast yêu thương</h3>
-        <p>Nghe các tập podcast hữu ích, chia sẻ tích cực.</p>
-    </a>
-
-    <a href="games/index.html" class="feature-card">
-        <h3>Trò chơi tương tác</h3>
-        <p>Tham gia trò chơi định hướng giúp vượt qua áp lực.</p>
-    </a>
-
-    <a href="chatbot/index.html" class="feature-card">
-        <h3>Chatbot Tâm lý</h3>
-        <p>Nhắn tin tâm sự và nhận chia sẻ tự động từ thầy cô.</p>
-    </a>
+<main>
+<section class="hero" style="padding:40px 20px 20px;">
+    <h2>Chatbot Tâm lý</h2>
+    <p>Nhắn tin tâm sự và nhận chia sẻ tự động từ thầy cô.</p>
 </section>
+<style>
+/* ... code cũ ... */
 
-    </main>
+.call-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #ef4444;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1000;
+}
 
-    <footer>
-        <p>&copy; 2025 Gen Z An Toàn | Sản phẩm dự thi AI - Trợ lý công vụ Chi đoàn Trường THCS Tố Hữu | Nguyễn Đức Tân - Trương Văn Hiếu </p>
-    </footer>
+/* Nút Zalo */
+.zalo-btn {
+    position: fixed;
+    top: 65px; /* nằm dưới nút gọi */
+    right: 15px;
+    background: #0068ff;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 6px 16px rgba(0,104,255,0.25);
+    transition: 0.25s ease;
+}
+
+.zalo-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+</style>
+<a class="call-btn" href="tel:0336175393">📞 Gọi</a>
+<a class="zalo-btn" href="https://zalo.me/0336175393" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+</a>
+
+<div class="chat-container">
+    <div class="chat-header">
+        Chatbot Tâm lý
+        <small>Nhắn tin an toàn, mọi chuyện đều giữ bí mật</small>
+    </div>
+    <div class="chat-box" id="chatBox"></div>
+    <div class="quick-actions">
+        <button onclick="window.open('https://forms.gle/P3fW4y8oubNKEV638','_blank')">📝 Trợ giúp ẩn danh</button>
+        <button onclick="window.location.reload()">🔄 Làm mới chat</button>
+    </div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
+        <button id="sendBtn">Gửi</button>
+    </div>
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Gen Z An Toàn | Sản phẩm dự thi Nghiên cứu Khoa học kỹ thuật trường THCS Tố Hữu ❤️</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
